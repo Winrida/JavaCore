@@ -1,15 +1,16 @@
 package Task_5;
 
 import java.io.*;
+import java.util.Scanner;
 
 public class Solution {
     public static void main(String[] args) throws IOException {
-        try (BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-             InputStream inputStream = new FileInputStream(reader.readLine()))
+        try (Scanner reader = new Scanner(System.in);
+             InputStream inputStream = new FileInputStream(reader.nextLine()))
         {
-            BufferedReader buf = new BufferedReader(new InputStreamReader(inputStream));
-            while (buf.ready()){
-                System.out.println(buf.readLine());
+            Scanner buf = new Scanner(inputStream);
+            while (buf.hasNextLine()){
+                System.out.println(buf.nextLine());
             }
         }
     }
